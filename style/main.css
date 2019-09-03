@@ -1,10 +1,37 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+#word {
+  position: relative;
+
+}
+
+#word::before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 17px;
+  right: 0;
+  background-color: black;
+  animation-name: cursorAnimtion;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes cursorAnimtion {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
