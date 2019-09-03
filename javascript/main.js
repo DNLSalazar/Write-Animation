@@ -1,16 +1,15 @@
 var i = 0;
-var arrayWords = ["Ogre", "Windranger", "OD", "Pudge", "Mirana", "Invoker"];
+var arrayWords = ["Awesome", "Brilliant", "Simple", "Elegant", "Functional", "Whatever you want it to be"];
 var wordElement = document.getElementById("word");
 var currentWord = wordElement.innerHTML;
 var status = 0;
 
 window.addEventListener("load", function () {
-  setInterval(animation, 200);
+  setInterval(animation, 150);
 });
 
 
 function animation () {
-
   if (status == 0) {
     if (currentWord.length < arrayWords[i].length) {
       currentWord += arrayWords[i].slice(currentWord.length, currentWord.length+1);
@@ -30,5 +29,4 @@ function animation () {
       return;
     }
   }
-
 }
